@@ -2,276 +2,276 @@
 
 # Studio Multimodal AI
 
-*A comprehensive Python framework for multimodal AI analysis across images, videos, and text*
+*Um framework Python abrangente para análise de IA multimodal em imagens, vídeos e texto*
 
 [![Python](https://img.shields.io/badge/Python->=3.13-blue?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Code Style](https://img.shields.io/badge/Code%20Style-Black-black?style=flat-square)](https://github.com/psf/black)
 
-[Features](#features) • [Installation](#installation) • [Quick Start](#quick-start) • [Modules](#modules) • [Examples](#examples)
+[Funcionalidades](#funcionalidades) • [Instalação](#instalação) • [Início Rápido](#início-rápido) • [Módulos](#módulos) • [Exemplos](#exemplos)
 
 </div>
 
-A modular Python framework designed for comprehensive multimodal AI analysis. This project provides organized tools and workflows for processing and analyzing images, videos, and text data using state-of-the-art machine learning techniques.
+Um framework Python modular projetado para análise abrangente de IA multimodal. Este projeto fornece ferramentas organizadas e fluxos de trabalho para processamento e análise de dados de imagens, vídeos e texto usando técnicas de aprendizado de máquina de última geração.
 
 > [!TIP]
-> This project is structured as independent modules, allowing you to use only the components you need for your specific multimodal AI tasks.
+> Este projeto é estruturado como módulos independentes, permitindo que você use apenas os componentes necessários para suas tarefas específicas de IA multimodal.
 
-## Features
+## Funcionalidades
 
-- 🖼️ **Image Processing** - Computer vision, feature extraction, object detection, and classification
-- 🎥 **Video Analysis** - Frame extraction, motion detection, action recognition, and temporal analysis  
-- 📝 **Text Processing** - NLP, sentiment analysis, entity recognition, and language modeling
-- 🧩 **Modular Architecture** - Independent modules that can be used separately or together
-- 🔬 **Research Ready** - Jupyter notebooks for experimentation and analysis
-- 🧪 **Test Coverage** - Comprehensive test suite for reliable development
-- 📊 **Visualization** - Built-in plotting and data visualization capabilities
-- 🚀 **Easy Setup** - Simple installation and configuration process
+- 🖼️ **Processamento de Imagens** - Visão computacional, extração de características, detecção de objetos e classificação
+- 🎥 **Análise de Vídeos** - Extração de quadros, detecção de movimento, reconhecimento de ações e análise temporal  
+- 📝 **Processamento de Texto** - PLN, análise de sentimento, reconhecimento de entidades e modelagem de linguagem
+- 🧩 **Arquitetura Modular** - Módulos independentes que podem ser usados separadamente ou em conjunto
+- 🔬 **Pronto para Pesquisa** - Notebooks Jupyter para experimentação e análise
+- 🧪 **Cobertura de Testes** - Conjunto abrangente de testes para desenvolvimento confiável
+- 📊 **Visualização** - Recursos integrados de plotagem e visualização de dados
+- 🚀 **Configuração Fácil** - Processo simples de instalação e configuração
 
-## Installation
+## Instalação
 
-### Prerequisites
+### Pré-requisitos
 
 - Python >= 3.13
-- pip or conda package manager
+- pip ou gerenciador de pacotes conda
 
-### Quick Install
+### Instalação Rápida
 
 ```bash
-# Clone the repository
+# Clone o repositório
 git clone https://github.com/yourusername/studio-multimodal-ai.git
 cd studio-multimodal-ai
 
-# Install dependencies
+# Instale as dependências
 pip install -r requirements.txt
 
-# Or install in development mode
+# Ou instale no modo de desenvolvimento
 pip install -e .
 ```
 
-### Virtual Environment (Recommended)
+### Ambiente Virtual (Recomendado)
 
 ```bash
-# Create virtual environment
+# Crie um ambiente virtual
 python -m venv .venv
 
-# Activate virtual environment
+# Ative o ambiente virtual
 # Windows
 .venv\Scripts\activate
 # macOS/Linux
 source .venv/bin/activate
 
-# Install dependencies
+# Instale as dependências
 pip install -r requirements.txt
 ```
 
-## Quick Start
+## Início Rápido
 
 ```python
-# Image processing example
+# Exemplo de processamento de imagens
 from images_module.src.preprocessing import preprocess_image
 from images_module.src.features import extract_features
 
-# Load and preprocess an image
+# Carregue e processe uma imagem
 image = preprocess_image('path/to/image.jpg')
 features = extract_features(image)
 
-# Video processing example
+# Exemplo de processamento de vídeo
 from videos_module.src.preprocessing import extract_frames
 from videos_module.src.analysis import detect_motion
 
-# Extract frames and analyze motion
+# Extraia quadros e analise movimento
 frames = extract_frames('path/to/video.mp4')
 motion_data = detect_motion(frames)
 
-# Text processing example
+# Exemplo de processamento de texto
 from text_module.src.preprocessing import clean_text, tokenize_text
 from text_module.src.analysis import sentiment_analysis
 
-# Process and analyze text
-clean_content = clean_text('Your text content here')
+# Processe e analise texto
+clean_content = clean_text('Seu conteúdo de texto aqui')
 tokens = tokenize_text(clean_content)
 sentiment = sentiment_analysis(clean_content)
 ```
 
-## Modules
+## Módulos
 
-### 🖼️ Images Module
+### 🖼️ Módulo de Imagens
 
-Located in [`images_module/`](images_module/), this module provides comprehensive image processing capabilities:
+Localizado em [`images_module/`](images_module/), este módulo fornece capacidades abrangentes de processamento de imagens:
 
-- **Preprocessing**: Image loading, resizing, normalization, and enhancement
-- **Feature Extraction**: Traditional CV features and deep learning embeddings  
-- **Object Detection**: YOLO, R-CNN, and other detection frameworks
-- **Classification**: Image categorization using pre-trained and custom models
+- **Pré-processamento**: Carregamento, redimensionamento, normalização e melhoria de imagens
+- **Extração de Características**: Características tradicionais de CV e embeddings de deep learning  
+- **Detecção de Objetos**: YOLO, R-CNN e outras frameworks de detecção
+- **Classificação**: Categorização de imagens usando modelos pré-treinados e personalizados
 
-### 🎥 Videos Module
+### 🎥 Módulo de Vídeos
 
-Located in [`videos_module/`](videos_module/), this module handles video analysis:
+Localizado em [`videos_module/`](videos_module/), este módulo lida com análise de vídeo:
 
-- **Frame Processing**: Extraction, filtering, and temporal sampling
-- **Motion Analysis**: Optical flow, object tracking, and movement detection
-- **Action Recognition**: Activity classification and temporal event detection
-- **Video Summarization**: Key frame extraction and content summarization
+- **Processamento de Quadros**: Extração, filtragem e amostragem temporal
+- **Análise de Movimento**: Fluxo óptico, rastreamento de objetos e detecção de movimento
+- **Reconhecimento de Ações**: Classificação de atividades e detecção de eventos temporais
+- **Resumo de Vídeo**: Extração de quadros-chave e resumo de conteúdo
 
-### 📝 Text Module
+### 📝 Módulo de Texto
 
-Located in [`text_module/`](text_module/), this module provides NLP capabilities:
+Localizado em [`text_module/`](text_module/), este módulo fornece capacidades de PLN:
 
-- **Text Preprocessing**: Cleaning, tokenization, and normalization
-- **Analysis**: Sentiment analysis, entity recognition, and topic modeling
-- **Language Models**: Integration with transformers and custom models
-- **Classification**: Text categorization and intent detection
+- **Pré-processamento de Texto**: Limpeza, tokenização e normalização
+- **Análise**: Análise de sentimento, reconhecimento de entidades e modelagem de tópicos
+- **Modelos de Linguagem**: Integração com transformers e modelos personalizados
+- **Classificação**: Categorização de texto e detecção de intenções
 
-## Project Structure
+## Estrutura do Projeto
 
 ```
 studio-multimodal-ai/
-├── images_module/          # Image processing and computer vision
-│   ├── data/              # Image datasets
-│   ├── notebooks/         # Jupyter notebooks for experimentation
-│   ├── src/              # Core image processing code
-│   └── tests/            # Unit tests for image functionality
-├── videos_module/          # Video processing and analysis
-│   ├── data/              # Video datasets
-│   ├── notebooks/         # Video analysis notebooks
-│   ├── src/              # Core video processing code
-│   └── tests/            # Unit tests for video functionality
-├── text_module/           # Text processing and NLP
-│   ├── data/              # Text datasets
-│   ├── notebooks/         # NLP experiment notebooks
-│   ├── src/              # Core text processing code
-│   └── tests/            # Unit tests for text functionality
-├── docs/                  # Documentation and guides
-├── requirements.txt       # Project dependencies
-└── setup.py              # Package configuration
+├── images_module/          # Processamento de imagens e visão computacional
+│   ├── data/              # Datasets de imagens
+│   ├── notebooks/         # Notebooks Jupyter para experimentação
+│   ├── src/              # Código principal de processamento de imagens
+│   └── tests/            # Testes unitários para funcionalidades de imagem
+├── videos_module/          # Processamento e análise de vídeo
+│   ├── data/              # Datasets de vídeo
+│   ├── notebooks/         # Notebooks de análise de vídeo
+│   ├── src/              # Código principal de processamento de vídeo
+│   └── tests/            # Testes unitários para funcionalidades de vídeo
+├── text_module/           # Processamento de texto e PLN
+│   ├── data/              # Datasets de texto
+│   ├── notebooks/         # Notebooks de experimentos de PLN
+│   ├── src/              # Código principal de processamento de texto
+│   └── tests/            # Testes unitários para funcionalidades de texto
+├── docs/                  # Documentação e guias
+├── requirements.txt       # Dependências do projeto
+└── setup.py              # Configuração do pacote
 ```
 
-## Examples
+## Exemplos
 
-### Image Classification Pipeline
+### Pipeline de Classificação de Imagens
 
 ```python
 from images_module.src.preprocessing import preprocess_image
 from images_module.src.classification import ImageClassifier
 
-# Initialize classifier
+# Inicialize o classificador
 classifier = ImageClassifier(model_type='resnet50')
 
-# Process and classify image
+# Processe e classifique a imagem
 image = preprocess_image('sample.jpg', target_size=(224, 224))
 prediction = classifier.predict(image)
-print(f"Predicted class: {prediction}")
+print(f"Classe predita: {prediction}")
 ```
 
-### Video Motion Detection
+### Detecção de Movimento em Vídeo
 
 ```python
 from videos_module.src.preprocessing import extract_frames
 from videos_module.src.analysis import MotionDetector
 
-# Extract frames and detect motion
+# Extraia quadros e detecte movimento
 frames = extract_frames('video.mp4', frame_interval=5)
 detector = MotionDetector()
 motion_regions = detector.detect(frames)
 ```
 
-### Text Sentiment Analysis
+### Análise de Sentimento de Texto
 
 ```python
 from text_module.src.preprocessing import TextPreprocessor
 from text_module.src.analysis import SentimentAnalyzer
 
-# Initialize components
+# Inicialize os componentes
 preprocessor = TextPreprocessor()
 analyzer = SentimentAnalyzer()
 
-# Analyze sentiment
-text = "This is an amazing multimodal AI framework!"
+# Analise o sentimento
+text = "Este é um framework de IA multimodal incrível!"
 clean_text = preprocessor.clean_text(text)
 sentiment = analyzer.analyze(clean_text)
-print(f"Sentiment: {sentiment}")
+print(f"Sentimento: {sentiment}")
 ```
 
-## Development
+## Desenvolvimento
 
-### Running Tests
+### Executando Testes
 
 ```bash
-# Run all tests
+# Execute todos os testes
 pytest
 
-# Run specific module tests
+# Execute testes de módulos específicos
 pytest images_module/tests/
 pytest videos_module/tests/
 pytest text_module/tests/
 ```
 
-### Code Formatting
+### Formatação de Código
 
 ```bash
-# Format code with black
+# Formate o código com black
 black .
 
-# Check code style
+# Verifique o estilo do código
 flake8 .
 ```
 
-### Jupyter Notebooks
+### Notebooks Jupyter
 
-Launch Jupyter to explore the example notebooks:
+Lance o Jupyter para explorar os notebooks de exemplo:
 
 ```bash
 jupyter notebook
-# Navigate to any module's notebooks/ folder
+# Navegue até a pasta notebooks/ de qualquer módulo
 ```
 
-## Dependencies
+## Dependências
 
-The project includes comprehensive dependencies for multimodal AI:
+O projeto inclui dependências abrangentes para IA multimodal:
 
-- **Core**: NumPy, Pandas, SciPy
-- **Computer Vision**: OpenCV, Pillow, scikit-image
-- **Video Processing**: MoviePy, imageio
-- **NLP**: NLTK, spaCy, transformers
-- **Machine Learning**: scikit-learn, PyTorch, TensorFlow
-- **Visualization**: Matplotlib, Seaborn, Plotly
-- **Development**: pytest, black, flake8
+- **Núcleo**: NumPy, Pandas, SciPy
+- **Visão Computacional**: OpenCV, Pillow, scikit-image
+- **Processamento de Vídeo**: MoviePy, imageio
+- **PLN**: NLTK, spaCy, transformers
+- **Aprendizado de Máquina**: scikit-learn, PyTorch, TensorFlow
+- **Visualização**: Matplotlib, Seaborn, Plotly
+- **Desenvolvimento**: pytest, black, flake8
 
-See [`requirements.txt`](requirements.txt) for the complete list.
+Consulte [`requirements.txt`](requirements.txt) para a lista completa.
 
-## Resources
+## Recursos
 
-- [Computer Vision with OpenCV](https://opencv.org/)
-- [Video Processing with MoviePy](https://zulko.github.io/moviepy/)
-- [NLP with spaCy](https://spacy.io/)
-- [Deep Learning with PyTorch](https://pytorch.org/)
-- [Transformers Library](https://huggingface.co/transformers/)
+- [Visão Computacional com OpenCV](https://opencv.org/)
+- [Processamento de Vídeo com MoviePy](https://zulko.github.io/moviepy/)
+- [PLN com spaCy](https://spacy.io/)
+- [Deep Learning com PyTorch](https://pytorch.org/)
+- [Biblioteca Transformers](https://huggingface.co/transformers/)
 
 ## FAQ
 
-**Q: Can I use individual modules separately?**
-A: Yes! Each module (`images_module`, `videos_module`, `text_module`) is designed to be independent and can be imported separately.
+**P: Posso usar módulos individuais separadamente?**
+R: Sim! Cada módulo (`images_module`, `videos_module`, `text_module`) foi projetado para ser independente e pode ser importado separadamente.
 
-**Q: What Python versions are supported?**
-A: This project requires Python 3.13 or higher for optimal performance and compatibility.
+**P: Quais versões do Python são suportadas?**
+R: Este projeto requer Python 3.13 ou superior para desempenho e compatibilidade ideais.
 
-**Q: How do I add custom models?**
-A: Each module has extensible architecture. Add your custom models to the respective `src/` directories and follow the existing patterns.
+**P: Como adiciono modelos personalizados?**
+R: Cada módulo possui arquitetura extensível. Adicione seus modelos personalizados aos respectivos diretórios `src/` e siga os padrões existentes.
 
-## Troubleshooting
+## Solução de Problemas
 
-**Installation Issues:**
-- Ensure you have Python 3.13+ installed
-- Use a virtual environment to avoid dependency conflicts
-- On Windows, install Visual Studio Build Tools for compilation
+**Problemas de Instalação:**
+- Certifique-se de ter o Python 3.13+ instalado
+- Use um ambiente virtual para evitar conflitos de dependências
+- No Windows, instale o Visual Studio Build Tools para compilação
 
-**Memory Issues with Large Files:**
-- Process data in batches for large datasets
-- Use appropriate chunk sizes for video processing
-- Monitor memory usage during processing
+**Problemas de Memória com Arquivos Grandes:**
+- Processe dados em lotes para datasets grandes
+- Use tamanhos de chunk apropriados para processamento de vídeo
+- Monitore o uso de memória durante o processamento
 
-**GPU Support:**
-- Install CUDA-compatible versions of PyTorch/TensorFlow
-- Verify GPU drivers are properly installed
-- Check CUDA compatibility with your hardware
+**Suporte a GPU:**
+- Instale versões compatíveis com CUDA do PyTorch/TensorFlow
+- Verifique se os drivers da GPU estão instalados corretamente
+- Verifique a compatibilidade CUDA com seu hardware
